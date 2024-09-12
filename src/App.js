@@ -1,8 +1,11 @@
+import KullaniciProvider from "./context/KullanıcıProvider";
+import GosterUsers from "./pages/GosterUsers";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Cohort 17</h1>
-    </div>
+    <KullaniciProvider>
+      <GosterUsers/>
+    </KullaniciProvider>
   );
 }
 
