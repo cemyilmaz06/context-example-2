@@ -10,7 +10,7 @@ const Isimler = () => {
 {user.slice(0,4).map((a)=>(
   <div key={a.id} style={{textAlign:"center", background:"pink"}}>
 
-{a.login}
+{a.login.toUpperCase()}
 
   </div>
 )) }

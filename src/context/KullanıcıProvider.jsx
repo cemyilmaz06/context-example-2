@@ -11,8 +11,8 @@ useEffect(()=>{
 },[])
 
 
-const changeWidth=(id,widtH)=>{
-    setUser(user.map((a)=>a.id===id ? {...a,width:widtH}: a))
+const changeWidth=(id,width)=>{
+    setUser(user.map((a)=>a.id===id ? {...a,width:width}: a))
 }
   return (
   <KullaniciContext.Provider value={{user,changeWidth}}>
