@@ -1,12 +1,18 @@
-import React, { createContext } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 export const KullaniciContext=createContext()
 
 const KullaniciProvider = ({children}) => {
-fetch("https://api.github.com/users")
+const [user, setUser] = useState("")
+useEffect(()=>{
+    fetch("https://api.github.com/users")
+.then((res)=>res.json())
+.then((veri)=>setUser())
+},[])
+
 
   return (
-  <KullaniciContext.Provider value={{}}>
+  <KullaniciContext.Provider value={{user}}>
 {children}
   </KullaniciContext.Provider>
 
